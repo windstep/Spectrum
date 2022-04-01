@@ -29,8 +29,8 @@ const configurationProduction = {
     "uid": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     "secret": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     "userAgent": "Spectrum - Discord Bot",
-    "authenticationUri": "https://nexuscrawler.net:3003/spectrum/authentication/",
-    "configurationUri": "https://nexuscrawler.net:3003/spectrum/configuration/",
+    "authenticationUri": "https://127.0.0.1:3003/spectrum/authentication/",
+    "configurationUri": "https://127.0.0.1:3003/spectrum/configuration/",
     "botToken": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     "host": "example.com",
     "port": 3003
