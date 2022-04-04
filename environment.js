@@ -8,6 +8,7 @@ const configuration = {
     "ssl": {
         "certPath": process.env.SSL_CERT_PATH,
         "keyPath": process.env.SSL_KEY_PATH,
+        "caPath": process.env.SSL_CA_PATH,
     },
     "uid": process.env.ESI_CLIENT_ID,
     "secret": process.env.ESI_CLIENT_SECRET,

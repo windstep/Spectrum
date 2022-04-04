@@ -16,7 +16,8 @@ const app = express();
 
 const httpsServer = https.createServer({
     "key": fs.readFileSync(environment.configuration["ssl"]["keyPath"]),
-    "cert": fs.readFileSync(environment.configuration["ssl"]["certPath"])
+    "cert": fs.readFileSync(environment.configuration["ssl"]["certPath"]),
+    ca: fs.readFileSync(environment.configuration['ssl']['caPath'])
 }, app);
 
 app.set("trust proxy", 1); // If we have secure cookies and are behind a proxy, we need this.
