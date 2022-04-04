@@ -2,43 +2,21 @@
 
 "use strict";
 
-const development = false;
+require('dotenv').config()
 
-const configurationDevelopment = {
+const configuration = {
     "ssl": {
-        "certPath": "./cert.pem",
-        "keyPath": "./key.pem",
-        "passphrase": "xxxxxxxxxxxxxxxxxxxxxxx"
+        "certPath": process.env.SSL_CERT_PATH,
+        "keyPath": process.env.SSL_KEY_PATH,
     },
-    "uid": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    "secret": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    "userAgent": "Spectrum - Discord Bot",
-    "authenticationUri": "https://127.0.0.1:3003/spectrum/authentication/",
-    "configurationUri": "https://127.0.0.1:3003/spectrum/configuration/",
-    "botToken": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    "host": "127.0.0.1",
-    "port": 3003
-};
-
-const configurationProduction = {
-    "ssl": {
-        "certPath": "./cert.pem",
-        "keyPath": "./key.pem",
-        "passphrase": "xxxxxxxxxxxxxxxxxxxxxxxxx"
-    },
-    "uid": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    "secret": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    "userAgent": "Spectrum - Discord Bot",
-    "authenticationUri": "https://127.0.0.1:3003/spectrum/authentication/",
-    "configurationUri": "https://127.0.0.1:3003/spectrum/configuration/",
-    "botToken": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    "host": "example.com",
-    "port": 3003
-};
-
-if (development) {
-    module.exports.configuration = configurationDevelopment;
+    "uid": process.env.ESI_CLIENT_ID,
+    "secret": process.env.ESI_CLIENT_SECRET,
+    "userAgent": process.env.USER_AGENT,
+    "authenticationUri": process.env.AUTHENTICATION_URI,
+    "configurationUri": process.env.CONFIGURATION_URI,
+    "botToken": process.env.DISCORD_BOT_TOKEN,
+    "host": process.env.HOST,
+    "port": process.env.PORT
 }
-else {
-    module.exports.configuration = configurationProduction;
-}
+
+module.exports.configuration = configuration;

@@ -30,7 +30,7 @@ const data = {
     "7": {
         "title": "Discord - Add Channel To Category",
         "description": "Add a channel to a category."
-    }
+    },
 };
 
 module.exports.data = data;
