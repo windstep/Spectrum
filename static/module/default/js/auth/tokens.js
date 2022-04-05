@@ -397,7 +397,7 @@ function load_cookie() {
 
 function open_socket() {
     socket = io(
-        "https://" + cookie["host"] + ":" + cookie["port"] + "/default",
+        cookie["schema"] + cookie["host"] + ":" + cookie["port"] + "/default",
         {
             query: "user_id=" + cookie["user_id"] + "&access_code=" + cookie["access_code"]
         }

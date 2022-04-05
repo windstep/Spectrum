@@ -4,6 +4,7 @@
 
 const fs = require("fs");
 const https = require("https");
+const http = require('http')
 const helmet = require("helmet");
 const express = require("express");
 const cookieParser = require("cookie-parser");
@@ -14,11 +15,16 @@ const output = require("./output.js");
 
 const app = express();
 
-const httpsServer = https.createServer({
-    "key": fs.readFileSync(environment.configuration["ssl"]["keyPath"]),
-    "cert": fs.readFileSync(environment.configuration["ssl"]["certPath"]),
-    ca: fs.readFileSync(environment.configuration['ssl']['caPath'])
-}, app);
+var httpsServer;
+if (environment.configuration.ssl.useSSL) {
+    httpsServer = https.createServer({
+        "key": fs.readFileSync(environment.configuration["ssl"]["keyPath"]),
+        "cert": fs.readFileSync(environment.configuration["ssl"]["certPath"]),
+        ca: fs.readFileSync(environment.configuration['ssl']['caPath'])
+    }, app);
+} else {
+    httpsServer = http.createServer({}, app)
+}
 
 app.set("trust proxy", 1); // If we have secure cookies and are behind a proxy, we need this.
 
@@ -61,34 +67,6 @@ app.get("/spectrum/authentication/", async (request, response) => {
 
     response.end();
 });
-
-/*app.get("/spectrum/authentication/", async (request, response) => {
-    const success = await views.authentication(
-        request
-    ).catch((error) => {
-        output.error(error);
-    });
-
-    if (success) {
-        response.writeHead(
-            302,
-            {
-                "Location": "/html/auth/ok.html"
-            }
-        );
-    }
-    else {
-        response.writeHead(
-            302,
-            {
-                "Location": "/html/auth/fail.html"
-            }
-        );
-    }
-
-    response.end();
-});*/
-
 app.get(["/spectrum/configuration/"], async (request, response) => {
     const success = await views.configuration(
         request,

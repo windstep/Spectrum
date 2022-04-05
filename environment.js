@@ -9,6 +9,7 @@ const configuration = {
         "certPath": process.env.SSL_CERT_PATH,
         "keyPath": process.env.SSL_KEY_PATH,
         "caPath": process.env.SSL_CA_PATH,
+        useSSL: parseInt(process.env.USE_SSL) === 1,
     },
     "uid": process.env.ESI_CLIENT_ID,
     "secret": process.env.ESI_CLIENT_SECRET,
@@ -17,7 +18,7 @@ const configuration = {
     "configurationUri": process.env.CONFIGURATION_URI,
     "botToken": process.env.DISCORD_BOT_TOKEN,
     "host": process.env.HOST,
-    "port": process.env.PORT
+    "port": process.env.PORT,
 }
 
 module.exports.configuration = configuration;

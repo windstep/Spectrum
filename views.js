@@ -158,6 +158,7 @@ async function authentication(request, response) {
         response.cookie(
             "spectrum_module_default_auth",
             {
+                "schema": environment.configuration.ssl.useSSL ? 'https://' : 'http://',
                 "host": environment.configuration["host"],
                 "port": environment.configuration["port"],
                 "user_id": userId,
@@ -211,6 +212,7 @@ async function configuration(request, response) {
         response.cookie(
             "spectrum_module_default_config",
             {
+                "schema": environment.configuration.ssl.useSSL ? 'https://' : 'http://',
                 "host": environment.configuration["host"],
                 "port": environment.configuration["port"],
                 "server_id": serverId, 
