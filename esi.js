@@ -889,7 +889,7 @@ async function getUniverseSystems(serverId) {
 async function getUniverseSystem(serverId, systemId) {
     return await request({
         "jsonFile": "./data/esi/universe/system/" + systemId + "/system.json",
-        "esiPath": "/v4/universe/systems/" + systemId + "/",
+        "esiPath": "/latest/universe/systems/" + systemId + "/",
         "serverId": serverId
     });
 }
@@ -1043,7 +1043,7 @@ async function getUniverseIds(serverId, name) {
 async function getCharacter(serverId, characterId) {
     return await request({
         "jsonFile": "./data/esi/character/" + characterId + "/character.json",
-        "esiPath": "/v4/characters/" + characterId + "/",
+        "esiPath": "/latest/characters/" + characterId + "/",
         "serverId": serverId
     });
 }
@@ -1216,7 +1216,7 @@ async function getCharacterShip(serverId, userId, characterId) {
 async function getCharacterSkills(serverId, userId, characterId) {
     return await request({
         "jsonFile": "./data/esi/character/" + characterId + "/skills.json",
-        "esiPath": "/v4/characters/" + characterId + "/skills/",
+        "esiPath": "/latest/characters/" + characterId + "/skills/",
         "serverId": serverId,
         "userId": userId,
         "characterId": characterId
@@ -1247,7 +1247,7 @@ async function getCharacterTitles(serverId, userId, characterId) {
 async function getCorporation(serverId, corporationId) {
     return await request({
         "jsonFile": "./data/esi/corporation/" + corporationId + "/corporation.json",
-        "esiPath": "/v4/corporations/" + corporationId + "/",
+        "esiPath": "/latest/corporations/" + corporationId + "/",
         "serverId": serverId
     });
 }
