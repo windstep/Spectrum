@@ -1152,7 +1152,7 @@ async function getCharacterMedals(serverId, userId, characterId) {
 async function getCharacterNotifications(serverId, userId, characterId) {
     return await request({
         "jsonFile": "./data/esi/character/" + characterId + "/notifications.json",
-        "esiPath": "/latest//characters/" + characterId + "/notifications/",
+        "esiPath": "/latest/characters/" + characterId + "/notifications/",
         "serverId": serverId,
         "userId": userId,
         "characterId": characterId
