@@ -305,7 +305,7 @@ client.on("message", async (message) => {
         const server = await message.guild.fetch();
         
         // Create a user directory to have him logged as being on the server.
-        let dir = `./data/discord/server/${server.id}/user/${member.user.id}`;
+        let dir = `./data/discord/server/${server.id}/user/${user.id}`;
         if (!await disk.exists(dir)) {
             await disk.createDirectory(dir)
         }
