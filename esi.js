@@ -759,7 +759,7 @@ async function getEtag(jsonFile) {
 async function getStatus() {
     return await request({
         "jsonFile": "./data/esi/status.json",
-        "esiPath": "/v1/status/",
+        "esiPath": "/latest/status/",
         "downtime": true
     });
 }
@@ -771,7 +771,7 @@ async function getStatus() {
 async function getUniverseFactions(serverId) {
     return await request({
         "jsonFile": "./data/esi/universe/factions.json",
-        "esiPath": "/v2/universe/factions/",
+        "esiPath": "/latest/universe/factions/",
         "serverId": serverId
     });
 }
@@ -783,7 +783,7 @@ async function getUniverseFactions(serverId) {
 async function getUniverseRegions(serverId) {
     return await request({
         "jsonFile": "./data/esi/universe/regions.json",
-        "esiPath": "/v1/universe/regions/",
+        "esiPath": "/latest/universe/regions/",
         "serverId": serverId
     });
 }
@@ -796,7 +796,7 @@ async function getUniverseRegions(serverId) {
 async function getUniverseRegion(serverId, regionId) {
     return await request({
         "jsonFile": "./data/esi/universe/region/" + regionId + "/region.json",
-        "esiPath": "/v1/universe/regions/" + regionId + "/",
+        "esiPath": "/latest/universe/regions/" + regionId + "/",
         "serverId": serverId
     });
 }
@@ -808,7 +808,7 @@ async function getUniverseRegion(serverId, regionId) {
 async function getUniverseConstellations(serverId) {
     return await request({
         "jsonFile": "./data/esi/universe/constellations.json",
-        "esiPath": "/v1/universe/constellations/",
+        "esiPath": "/latest/universe/constellations/",
         "serverId": serverId
     });
 }
@@ -821,7 +821,7 @@ async function getUniverseConstellations(serverId) {
 async function getUniverseConstellation(serverId, constellationId) {
     return await request({
         "jsonFile": "./data/esi/universe/constellation/" + constellationId + "/constellation.json",
-        "esiPath": "/v1/universe/constellations/" + constellationId + "/",
+        "esiPath": "/latest/universe/constellations/" + constellationId + "/",
         "serverId": serverId
     });
 }
@@ -834,7 +834,7 @@ async function getUniverseConstellation(serverId, constellationId) {
 async function getUniversePlanet(serverId, planetId) {
     return await request({
         "jsonFile": "./data/esi/universe/planet/" + planetId + "/planet.json",
-        "esiPath": "/v1/universe/planets/" + planetId + "/",
+        "esiPath": "/latest/universe/planets/" + planetId + "/",
         "serverId": serverId
     });
 }
@@ -847,7 +847,7 @@ async function getUniversePlanet(serverId, planetId) {
 async function getUniverseMoon(serverId, moonId) {
     return await request({
         "jsonFile": "./data/esi/universe/moon/" + moonId + "/moon.json",
-        "esiPath": "/v1/universe/moons/" + moonId + "/",
+        "esiPath": "/latest/universe/moons/" + moonId + "/",
         "serverId": serverId
     });
 }
@@ -862,7 +862,7 @@ async function getUniverseMoon(serverId, moonId) {
 async function getUniverseStructure(serverId, userId, characterId, structureId) {
     return await request({
         "jsonFile": "./data/esi/universe/structure/" + structureId + "/structure.json",
-        "esiPath": "/v2/universe/structures/" + structureId + "/",
+        "esiPath": "/latest/universe/structures/" + structureId + "/",
         "serverId": serverId,
         "userId": userId,
         "characterId": characterId
@@ -876,7 +876,7 @@ async function getUniverseStructure(serverId, userId, characterId, structureId) 
 async function getUniverseSystems(serverId) {
     return await request({
         "jsonFile": "./data/esi/universe/systems.json",
-        "esiPath": "/v1/universe/systems/",
+        "esiPath": "/latest/universe/systems/",
         "serverId": serverId
     });
 }
@@ -901,7 +901,7 @@ async function getUniverseSystem(serverId, systemId) {
 async function getUniverseTypes(serverId) {
     return await request({
         "jsonFile": "./data/esi/universe/types.json",
-        "esiPath": "/v1/universe/types/",
+        "esiPath": "/latest/universe/types/",
         "serverId": serverId
     });
 }
@@ -914,7 +914,7 @@ async function getUniverseTypes(serverId) {
 async function getUniverseType(serverId, typeId) {
     return await request({
         "jsonFile": "./data/esi/universe/type/" + typeId + "/type.json",
-        "esiPath": "/v3/universe/types/" + typeId + "/",
+        "esiPath": "/latest/universe/types/" + typeId + "/",
         "serverId": serverId
     });
 }
@@ -926,7 +926,7 @@ async function getUniverseType(serverId, typeId) {
 async function getUniverseGroups(serverId) {
     return await request({
         "jsonFile": "./data/esi/universe/groups.json",
-        "esiPath": "/v1/universe/groups/",
+        "esiPath": "/latest/universe/groups/",
         "serverId": serverId
     });
 }
@@ -939,7 +939,7 @@ async function getUniverseGroups(serverId) {
 async function getUniverseGroup(serverId, groupId) {
     return await request({
         "jsonFile": "./data/esi/universe/group/" + groupId + "/group.json",
-        "esiPath": "/v1/universe/groups/" + groupId + "/",
+        "esiPath": "/latest/universe/groups/" + groupId + "/",
         "serverId": serverId
     });
 }
@@ -951,7 +951,7 @@ async function getUniverseGroup(serverId, groupId) {
 async function getUniverseCategories(serverId) {
     return await request({
         "jsonFile": "./data/esi/universe/categories.json",
-        "esiPath": "/v1/universe/categories/",
+        "esiPath": "/latest/universe/categories/",
         "serverId": serverId
     });
 }
@@ -964,7 +964,7 @@ async function getUniverseCategories(serverId) {
 async function getUniverseCategory(serverId, categoryId) {
     return await request({
         "jsonFile": "./data/esi/universe/category/" + categoryId + "/category.json",
-        "esiPath": "/v1/universe/categories/" + categoryId + "/",
+        "esiPath": "/latest/universe/categories/" + categoryId + "/",
         "serverId": serverId
     });
 }
@@ -976,7 +976,7 @@ async function getUniverseCategory(serverId, categoryId) {
 async function getUniverseAncestries(serverId) {
     return await request({
         "jsonFile": "./data/esi/universe/ancestries.json",
-        "esiPath": "/v1/universe/ancestries/",
+        "esiPath": "/latest/universe/ancestries/",
         "serverId": serverId
     });
 }
@@ -988,7 +988,7 @@ async function getUniverseAncestries(serverId) {
 async function getUniverseBloodlines(serverId) {
     return await request({
         "jsonFile": "./data/esi/universe/bloodlines.json",
-        "esiPath": "/v1/universe/bloodlines/",
+        "esiPath": "/latest/universe/bloodlines/",
         "serverId": serverId
     });
 }
@@ -1000,7 +1000,7 @@ async function getUniverseBloodlines(serverId) {
 async function getUniverseRaces(serverId) {
     return await request({
         "jsonFile": "./data/esi/universe/races.json",
-        "esiPath": "/v1/universe/races/",
+        "esiPath": "/latest/universe/races/",
         "serverId": serverId
     });
 }
@@ -1013,7 +1013,7 @@ async function getUniverseRaces(serverId) {
 async function getUniverseNames(serverId, id) {
     return await request({
         "jsonFile": "./data/esi/universe/names/" + id + ".json",
-        "esiPath": "/v3/universe/names/",
+        "esiPath": "/latest/universe/names/",
         "serverId": serverId,
         "method": "POST",
         "postData": [id]
@@ -1028,7 +1028,7 @@ async function getUniverseNames(serverId, id) {
 async function getUniverseIds(serverId, name) {
     return await request({
         "jsonFile": "./data/esi/universe/ids/" + name + ".json",
-        "esiPath": "/v1/universe/ids/",
+        "esiPath": "/latest/universe/ids/",
         "serverId": serverId,
         "method": "POST",
         "postData": [name]
@@ -1056,7 +1056,7 @@ async function getCharacter(serverId, characterId) {
 async function getCharacterAffiliation(serverId, characterId) {
     return await request({
         "jsonFile": "./data/esi/character/" + characterId + "/affiliation.json",
-        "esiPath": "/v1/characters/affiliation/",
+        "esiPath": "/latest/characters/affiliation/",
         "serverId": serverId,
         "method": "POST",
         "postData": [characterId]
@@ -1072,7 +1072,7 @@ async function getCharacterAffiliation(serverId, characterId) {
 async function getCharacterContacts(serverId, userId, characterId,) {
     return await request({
         "jsonFile": "./data/esi/character/" + characterId + "/contacts.json",
-        "esiPath": "/v2/characters/" + characterId + "/contacts/",
+        "esiPath": "/latest/characters/" + characterId + "/contacts/",
         "serverId": serverId,
         "userId": userId,
         "characterId": characterId
@@ -1088,7 +1088,7 @@ async function getCharacterContacts(serverId, userId, characterId,) {
 async function getCharacterFatigue(serverId, userId, characterId) {
     return await request({
         "jsonFile": "./data/esi/character/" + characterId + "/fatigue.json",
-        "esiPath": "/v1/characters/" + characterId + "/fatigue/",
+        "esiPath": "/latest/characters/" + characterId + "/fatigue/",
         "serverId": serverId,
         "userId": userId,
         "characterId": characterId
@@ -1104,7 +1104,7 @@ async function getCharacterFatigue(serverId, userId, characterId) {
 async function getCharacterFwStats(serverId, userId, characterId) {
     return await request({
         "jsonFile": "./data/esi/character/" + characterId + "/fw_stats.json",
-        "esiPath": "/v1/characters/" + characterId + "/fw/stats/",
+        "esiPath": "/latest/characters/" + characterId + "/fw/stats/",
         "serverId": serverId,
         "userId": userId,
         "characterId": characterId
@@ -1120,7 +1120,7 @@ async function getCharacterFwStats(serverId, userId, characterId) {
 async function getCharacterLocation(serverId, userId, characterId) {
     return await request({
         "jsonFile": "./data/esi/character/" + characterId + "/location.json",
-        "esiPath": "/v1/characters/" + characterId + "/location/",
+        "esiPath": "/latest/characters/" + characterId + "/location/",
         "serverId": serverId,
         "userId": userId,
         "characterId": characterId
@@ -1136,7 +1136,7 @@ async function getCharacterLocation(serverId, userId, characterId) {
 async function getCharacterMedals(serverId, userId, characterId) {
     return await request({
         "jsonFile": "./data/esi/character/" + characterId + "/medals.json",
-        "esiPath": "/v1/characters/" + characterId + "/medals/",
+        "esiPath": "/latest/characters/" + characterId + "/medals/",
         "serverId": serverId,
         "userId": userId,
         "characterId": characterId
@@ -1152,7 +1152,7 @@ async function getCharacterMedals(serverId, userId, characterId) {
 async function getCharacterNotifications(serverId, userId, characterId) {
     return await request({
         "jsonFile": "./data/esi/character/" + characterId + "/notifications.json",
-        "esiPath": "/v5/characters/" + characterId + "/notifications/",
+        "esiPath": "/latest//characters/" + characterId + "/notifications/",
         "serverId": serverId,
         "userId": userId,
         "characterId": characterId
@@ -1168,7 +1168,7 @@ async function getCharacterNotifications(serverId, userId, characterId) {
 async function getCharacterOnline(serverId, userId, characterId) {
     return await request({
         "jsonFile": "./data/esi/character/" + characterId + "/online.json",
-        "esiPath": "/v2/characters/" + characterId + "/online/",
+        "esiPath": "/latest/characters/" + characterId + "/online/",
         "serverId": serverId,
         "userId": userId,
         "characterId": characterId
@@ -1184,7 +1184,7 @@ async function getCharacterOnline(serverId, userId, characterId) {
 async function getCharacterRoles(serverId, userId, characterId) {
     return await request({
         "jsonFile": "./data/esi/character/" + characterId + "/roles.json",
-        "esiPath": "/v2/characters/" + characterId + "/roles/",
+        "esiPath": "/latest/characters/" + characterId + "/roles/",
         "serverId": serverId,
         "userId": userId,
         "characterId": characterId
@@ -1200,7 +1200,7 @@ async function getCharacterRoles(serverId, userId, characterId) {
 async function getCharacterShip(serverId, userId, characterId) {
     return await request({
         "jsonFile": "./data/esi/character/" + characterId + "/ship.json",
-        "esiPath": "/v1/characters/" + characterId + "/ship/",
+        "esiPath": "/latest/characters/" + characterId + "/ship/",
         "serverId": serverId,
         "userId": userId,
         "characterId": characterId
@@ -1232,7 +1232,7 @@ async function getCharacterSkills(serverId, userId, characterId) {
 async function getCharacterTitles(serverId, userId, characterId) {
     return await request({
         "jsonFile": "./data/esi/character/" + characterId + "/titles.json",
-        "esiPath": "/v1/characters/" + characterId + "/titles/",
+        "esiPath": "/latest/characters/" + characterId + "/titles/",
         "serverId": serverId,
         "userId": userId,
         "characterId": characterId
@@ -1262,7 +1262,7 @@ async function getCorporation(serverId, corporationId) {
 async function getCorporationContacts(serverId, userId, characterId, corporationId) {
     return await request({
         "jsonFile": "./data/esi/corporation/" + corporationId + "/contacts.json",
-        "esiPath": "/v2/corporations/" + corporationId + "/contacts/",
+        "esiPath": "/latest/corporations/" + corporationId + "/contacts/",
         "serverId": serverId,
         "userId": userId,
         "characterId": characterId
@@ -1277,7 +1277,7 @@ async function getCorporationContacts(serverId, userId, characterId, corporation
 async function getCorporationFwStats(serverId, corporationId) {
     return await request({
         "jsonFile": "./data/esi/corporation/" + corporationId + "/fw_stats.json",
-        "esiPath": "/v1/corporations/" + corporationId + "/fw/stats/",
+        "esiPath": "/latest/corporations/" + corporationId + "/fw/stats/",
         "serverId": serverId
     });
 }
@@ -1290,7 +1290,7 @@ async function getCorporationFwStats(serverId, corporationId) {
 async function getAlliance(serverId, allianceId) {
     return await request({
         "jsonFile": "./data/esi/alliance/" + allianceId + "/alliance.json",
-        "esiPath": "/v3/alliances/" + allianceId + "/",
+        "esiPath": "/latest/alliances/" + allianceId + "/",
         "serverId": serverId
     });
 }
@@ -1305,7 +1305,7 @@ async function getAlliance(serverId, allianceId) {
 async function getAllianceContacts(serverId, userId, characterId, allianceId) {
     return await request({
         "jsonFile": "./data/esi/alliance/" + allianceId + "/contacts.json",
-        "esiPath": "/v2/alliances/" + allianceId + "/contacts/",
+        "esiPath": "/latest/alliances/" + allianceId + "/contacts/",
         "serverId": serverId,
         "userId": userId,
         "characterId": characterId
