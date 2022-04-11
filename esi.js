@@ -1056,7 +1056,7 @@ async function getCharacter(serverId, characterId) {
 async function getCharacterAffiliation(serverId, characterId) {
     return await request({
         "jsonFile": "./data/esi/character/" + characterId + "/affiliation.json",
-        "esiPath": "/latest/characters/affiliation/",
+        "esiPath": "/v2/characters/affiliation/",
         "serverId": serverId,
         "method": "POST",
         "postData": [characterId]
