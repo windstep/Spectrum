@@ -1,5 +1,5 @@
 const querystring = require("querystring");
-const {send_message} = require("../bot");
+const send_message = require("../bot").send_message;
 const memory = require("../memory.js");
 const discord = require('discord.js')
 const environment = require('../environment')
