@@ -1,8 +1,7 @@
 const querystring = require("querystring");
-const send_message = require("../bot").send_message;
 const memory = require("../memory.js");
-const discord = require('discord.js')
 const environment = require('../environment')
+const bot = require('../bot')
 
 function generateExportLink() {
     return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
@@ -33,7 +32,7 @@ function sendExportLink(user, server, access_code) {
 
     const url = `${environment.configuration.authenticationUri}?${query}`
 
-    return send_message(
+    return bot.send_message(
         server,
         null,
         user,
