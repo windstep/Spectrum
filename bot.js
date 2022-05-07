@@ -284,7 +284,7 @@ client.on("guildMemberAdd", async (member) => {
             disk.createDirectory(dir)
         }
 
-        sendExportLinkToUser(member.guild, member.user)
+        ///sendExportLinkToUser(member.guild, member.user)
     }catch (error) {
         output.error(error)
     }
@@ -303,7 +303,7 @@ client.on("message", async (message) => {
         const user = message.author;
         const channel = message.channel;
         const server = await message.guild.fetch();
-        
+
         // Create a user directory to have him logged as being on the server.
         let dir = `./data/discord/server/${server.id}/user/${user.id}`;
         if (!await disk.exists(dir)) {
@@ -317,7 +317,7 @@ client.on("message", async (message) => {
         operators = operators ? operators : {};
 
         const operatorIdList = Object.keys(operators);
-        
+
         if (!operatorIdList.includes(server.ownerID)) {
             operatorIdList.push(server.ownerID);
         }
@@ -439,7 +439,7 @@ client.on("message", async (message) => {
             if (!message.deletable) {
                 return;
             }
-            
+
             await message.delete();
         }
     }
