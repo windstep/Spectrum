@@ -17,24 +17,21 @@ const util = require("util");
 const {sendExportLinkToUser} = require("./services/authorization_link");
 
 const client = new discord.Client({
-    ws: {
-        intents: [
-            "DIRECT_MESSAGES",
-            "DIRECT_MESSAGE_REACTIONS",
-            "DIRECT_MESSAGE_TYPING",
-            "GUILDS",
-            "GUILD_BANS",
-            "GUILD_EMOJIS",
-            "GUILD_INTEGRATIONS",
-            "GUILD_INVITES",
-            "GUILD_MEMBERS",
-            "GUILD_MESSAGES",
-            "GUILD_MESSAGE_REACTIONS",
-            "GUILD_MESSAGE_TYPING",
-            "GUILD_VOICE_STATES",
-            "GUILD_WEBHOOKS"
-        ]
-    }
+    intents: [
+        "DIRECT_MESSAGES",
+        "DIRECT_MESSAGE_REACTIONS",
+        "DIRECT_MESSAGE_TYPING",
+        "GUILDS",
+        "GUILD_BANS",
+        "GUILD_INTEGRATIONS",
+        "GUILD_INVITES",
+        "GUILD_MEMBERS",
+        "GUILD_MESSAGES",
+        "GUILD_MESSAGE_REACTIONS",
+        "GUILD_MESSAGE_TYPING",
+        "GUILD_VOICE_STATES",
+        "GUILD_WEBHOOKS"
+    ]
 });
 
 /**
